@@ -4,21 +4,21 @@
   tasks:
      - name: Install apche2
        apt:
-         name: apache2
+         name: "{{installapche2ondebian}}"
          state: present
        when: ansible_os_family=="Debian"
      - name: start apache2
        service:
-         name: apache2
+         name: "{{installapche2ondebian}}"
          state: started
        when: ansible_os_family=="Debian"
      - name: Install httpd
        yum:
-         name: httpd
+         name: "{{installhttpdonredhat}}"
          state: present
        when: ansible_os_family=="RedHat"
      - name: start httpd
        service:
-         name: httpd
+         name: "{{installhttpdonredhat}}"
          state: started
        when: ansible_os_family=="RedHat"

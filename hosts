@@ -9,3 +9,7 @@
 [dbservers]
 172.31.29.44
 172.31.31.55
+
+[mywebservers:vars]
+installapche2ondebian=apache2
+installhttpdonredhat=httpd
