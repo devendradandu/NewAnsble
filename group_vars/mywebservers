@@ -3,4 +3,4 @@ key: val
 installapche2ondebian: apache2
 installhttpdonredhat: httpd
 
-installapche2ondebian: openjkd-8-jre
+installapche2ondebian: openjdk-8-jre
