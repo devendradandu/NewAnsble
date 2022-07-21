@@ -2,7 +2,7 @@
 - hosts: mywebservers
   become: yes
   tasks:
-     - name: Install apche2
+     - name: Install apche2 on debian
        apt:
          name: "{{installapche2ondebian}}"
          state: present
@@ -12,7 +12,7 @@
          name: "{{installapche2ondebian}}"
          state: started
        when: ansible_os_family=="Debian"
-     - name: Install httpd
+     - name: Install httpd on redhat
        yum:
          name: "{{installhttpdonredhat}}"
          state: present
