@@ -22,3 +22,8 @@
          name: "{{installhttpdonredhat}}"
          state: started
        when: ansible_os_family=="RedHat"
+     - name: install java on ubuntu
+       apt:
+         name: "{{installjdkondebian}}"
+         state: present
+       when: ansible_os_family=="Debian"
