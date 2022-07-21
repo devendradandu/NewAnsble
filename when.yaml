@@ -13,7 +13,7 @@
          state: started
        when: ansible_os_family=="Debian"
      - name: Install httpd
-       apt:
+       yum:
          name: httpd
          state: present
        when: ansible_os_family=="RedHat"
