@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes 
+  tasks:
+      - name: Install git,wget,tree in one shot in ubuntu server
+        apt:
+          name: "{{ items }}"
+          state: present
+        loop:
+          - git
+          - wget
+          - tree
